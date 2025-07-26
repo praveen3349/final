@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return "Hello, CI/CD!"
+    return "Hello, CI/CD! from git"
 
 
 @app.route('/status')
