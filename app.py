@@ -21,7 +21,7 @@ def home():
         <style>
             :root {
                 --primary-blue: #007bff;
-                --primary-gradient-start: #ed6de4;
+                --primary-gradient-start: #9a6ded;
                 --primary-gradient-end: #2193b0;
                 --card-bg: white;
                 --text-dark: #333;
@@ -111,7 +111,7 @@ def status():
             'status': 'healthy',
             'message': 'API is running smoothly ✅',
             'uptime': '100%',
-            'version': 'v1.0.0',
+            'version': 'v2.0.0',
             'last_updated': current_time_ist
         })
 
