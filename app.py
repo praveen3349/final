@@ -7,7 +7,6 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-<<<<<<< HEAD
     html = """
     <!DOCTYPE html>
     <html lang="en">
@@ -101,9 +100,6 @@ def home():
     </html>
     """
     return Response(html, mimetype='text/html')
-=======
-    return "Hello, CI/CD! from git"
->>>>>>> 1f1fbfef85c36c8729af77a7804e8e527022caeb
 
 
 @app.route('/status')
