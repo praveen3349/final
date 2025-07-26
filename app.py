@@ -21,7 +21,7 @@ def home():
         <style>
             :root {
                 --primary-blue: #007bff;
-                --primary-gradient-start: #6dd5ed;
+                --primary-gradient-start: #ed6de4;
                 --primary-gradient-end: #2193b0;
                 --card-bg: white;
                 --text-dark: #333;
@@ -78,7 +78,7 @@ def home():
                 box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
             }
             .btn-primary:hover {
-                background-color: #0056b3;
+                background-color: #f7dff2;
                 border-color: #0056b3;
                 transform: translateY(-2px);
                 box-shadow: 0 6px 15px rgba(0, 123, 255, 0.3);
@@ -91,7 +91,7 @@ def home():
     </head>
     <body>
         <div class="card">
-            <h1>🚀 Flask API Dashboard</h1>
+            <h1> Flask API Dashboard</h1>
             <p class="lead">Monitor and manage your API health with CI/CD.</p>
             <a href="/status" class="btn btn-primary btn-lg\
                     ">Check API Status</a>
