@@ -1,10 +1,13 @@
-import sys
 import os
+import sys
 
-# Adds the parent directory (which contains app.py) to the Python path
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+# Add root project path to sys.path for importing app.py
+sys.path.insert(
+    0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+)
 
-from app import app
+from app import app  # noqa: E402
+
 
 def test_status():
     client = app.test_client()
