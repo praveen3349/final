@@ -12,23 +12,9 @@ This project implements a fully automated **CI/CD pipeline** for a Python Flask 
 
 The project enables developers to build, test, and deploy their Flask application automatically on code changes.
 
----
-
-## 🔹 Architecture Diagram
-
-```mermaid
-flowchart TD
-    A[Developer Push to GitHub] --> B[GitHub Actions - CI]
-    B --> C[Lint with flake8]
-    B --> D[Run Unit Tests (pytest)]
-    D --> E[Jenkins - CD]
-    E --> F[Build Docker Image]
-    F --> G[Push to EC2 (via SSH)]
-    G --> H[Docker Run Container]
-    H --> I[Flask App Running on EC2]
+<img width="1024" height="1536" alt="image" src="https://github.com/user-attachments/assets/afd7e509-c269-4092-8bb8-18c9d8420e48" />
 
 
-## Technology Stack
  _______________________________________
 | Layer              | Tools           |
 |--------------------|-----------------|
