@@ -1,5 +1,4 @@
-# CI/CD for a Python (Flask) App
-
+ #                                                        CI/CD for a Python (Flask) App
 ## 🔹 Project Introduction
 
 This project implements a fully automated **CI/CD pipeline** for a Python Flask web application. It integrates key DevOps tools and services:
@@ -11,14 +10,14 @@ This project implements a fully automated **CI/CD pipeline** for a Python Flask 
 - **AWS EC2** for hosting the final deployment  
 
 The project enables developers to build, test, and deploy their Flask application automatically on code changes.
-
+ <br> <br>
 ## 🔹 Architecture diagram
 
 <img width="512" height="768" alt="image" src="https://github.com/user-attachments/assets/afd7e509-c269-4092-8bb8-18c9d8420e48" />
-
+ <br> <br>
+ 
 ## 🔹 Tech stack
 
- _______________________________________
 | Layer              | Tools           |
 |--------------------|-----------------|
 | Source Control     | Git + GitHub    |
@@ -28,111 +27,83 @@ The project enables developers to build, test, and deploy their Flask applicatio
 | Containerization   | Docker          |
 | Deployment         | AWS EC2         |
 | Testing            | Pytest, Flake8  |
-
+   
 ## 🔹 Setup instructions (local and Jenkins)
 
-# CI/CD Pipeline Setup for Flask App
-
 ## 🔧 Local Setup
-
 Follow these steps to run the Flask app and test the CI pipeline locally:
 
 ### 1. Clone the Repository
-\`\`\`bash
-git clone https://github.com/your-username/your-repo.git
+git clone https://github.com/your-username/your-repo.git <br>
 cd your-repo
 
 ### 2\. (Optional) Create and Activate Virtual Environment
-
-bash
 
 python \-m venv venv
 source venv/bin/activate  \# On Windows: venv\\Scripts\\activate
 
 ### 3\. Install Dependencies
 
-bash
-
 pip install \-r requirements.txt
 
 ### 4\. Lint and Test the Code
-
-bash
 
 flake8 .
 pytest
 
 ### 5\. Run the App Locally
 
-bash
-
-python app.py
-\# Or using Docker
-docker build \-t flask-app-image .
+python app.py  <br>
+\# Or using Docker <br>
+docker build \-t flask-app-image .  <br>
 docker run \-d \-p 5000:5000 flask-app-image
 
 ## ⚙️ CI Setup using GitHub Actions
-
 CI is implemented using GitHub Actions to ensure clean code and passing tests before deployment.
 
 **Workflow Location:**  
 `.github/workflows/ci.yml`
 
 **Workflow Tasks:**
-
-* *   ✅ Lint Python code with flake8
-*     
-* *   ✅ Run unit tests with pytest
-*     
+ *   ✅ Lint Python code with flake8   
+ *   ✅ Run unit tests with pytest   
 
 **Triggers:**
 
-* *   On every push and pull\_request to any branch
-*     
+ *   On every push and pull\_request to any branch    
 
 **Outcome:**
 
-* *   Ensures code quality
-*     
-* *   Avoids breaking changes before reaching production
-*     
+ *   Ensures code quality     
+ *   Avoids breaking changes before reaching production   
 
 ## 🔁 CD Setup using Jenkins + Docker
 
 CD is managed with Jenkins, hosted via Docker Desktop container.
 
 ### Jenkins Setup:
-
-* *   Installed Jenkins via Docker Desktop
-*     
-* *   Installed Git inside Jenkins container
-*     
-* *   Installed required Jenkins plugins:
-*     
-*     * *   Git   
-*     * *   Docker
-*     * *   SSH Agent    
-*     * *   Pipeline    
+ *  Installed Jenkins via Docker Desktop     
+ *   Installed Git inside Jenkins container     
+ *   Installed required Jenkins plugins:    
+     *   Git   
+     *   Docker
+     *   SSH Agent    
+     *   Pipeline    
 
 ### Ngrok for Webhooks:
 
-* *   Exposed Jenkins via ngrok HTTPS tunnel    
-* *   Used ngrok public HTTPS URL in GitHub Webhooks    
+*    Exposed Jenkins via ngrok HTTPS tunnel    
+*    Used ngrok public HTTPS URL in GitHub Webhooks    
 
 ### Pipeline Automation:
 
 Created `Jenkinsfile` with the following stages:
 
-1. 1.  Clone repository
-1.     
-1. 2.  Build Docker image
-1.     
-1. 3.  SSH into AWS EC2 instance
-1.     
-1. 4.  Stop and remove old container (if any)
-1.     
-1. 5.  Build and run new Docker container on EC2
-1.     
+ 1.  Clone repository     
+ 2.  Build Docker image    
+ 3.  SSH into AWS EC2 instance     
+ 4.  Stop and remove old container (if any)     
+ 5.  Build and run new Docker container on EC2    
 
 ## ☁️ AWS EC2 Deployment
 
@@ -140,49 +111,42 @@ The Flask app is deployed on an AWS EC2 instance with Docker.
 
 ### EC2 Setup:
 
-* *   Launched a t2.micro EC2 instance
-*     
-* *   Installed Docker
-*     
+ *   Launched a t2.micro EC2 instance    
+ *   Installed Docker    
 
 ### Jenkins to EC2 SSH Integration:
 
-* *   Configured Jenkins with private key using SSH Agent
-*     
-* *   Jenkins uses SSH to access EC2 and run deployment commands
-*     
+ *   Configured Jenkins with private key using SSH Agent     
+ *   Jenkins uses SSH to access EC2 and run deployment commands    
 
 ### Automated Deployment on Code Push:
 
-1. 1.  Jenkins pipeline triggers on push to main
-1.     
-1. 2.  SSH into EC2
-1.     
-1. 3.  Pulls latest code, removes old container/image
-1.     
-1. 4.  Builds and runs new Docker container with updated Flask app
-1.     
+ 1.  Jenkins pipeline triggers on push to main     
+ 2.  SSH into EC2    
+ 3.  Pulls latest code, removes old container/image     
+ 4.  Builds and runs new Docker container with updated Flask app     
 
-## ✅ Final Deployment Output
+##  Final Deployment Output
 
 Access your Flask app in the browser at:
-
-bash
 
 http://<your-ec2-public-ip\>/
 
 The application will show the Dashboard and Status APIs with full CI/CD automation.
+
 <br> <br>
+
 # 🔹 Sample API response
 ## Home Page ( / )
 <img width="1844" height="847" alt="flask api " src="https://github.com/user-attachments/assets/00944b38-12d3-4fb9-b25e-282cae5394d4" />
 <br> <br> 
+
 ## Status Page  ( /status )
 <img width="1842" height="825" alt="Screenshot (716)" src="https://github.com/user-attachments/assets/a5f25d75-f6ce-4351-b53f-c83f1ef94982" />
 <br> <br>
 
 # 🔹 Screenshots of each pipeline stage
-   <img width="1854" height="867" alt="Screenshot (722)" src="https://github.com/user-attachments/assets/cadd9190-7418-4755-a161-c5313913b792" />
+ <img width="1854" height="867" alt="Screenshot (722)" src="https://github.com/user-attachments/assets/cadd9190-7418-4755-a161-c5313913b792" />
  <br> <br>
 <img width="1849" height="871" alt="Screenshot (708)" src="https://github.com/user-attachments/assets/5421350c-2fc0-403b-a623-26d3c5ecaf09" />
  <br> <br>
@@ -190,6 +154,7 @@ The application will show the Dashboard and Status APIs with full CI/CD automati
  <br> <br>
 <img width="1806" height="852" alt="image" src="https://github.com/user-attachments/assets/88c5b916-e438-43f2-9711-8783548722de" />
  <br> <br>
+ 
 # 🔹 GitHub Action & Jenkins output
    <img width="1849" height="897" alt="Screenshot (724)" src="https://github.com/user-attachments/assets/b2e94adb-119d-4991-985c-9108fc9c7ceb" />
  <br> <br>
@@ -199,6 +164,7 @@ The application will show the Dashboard and Status APIs with full CI/CD automati
  <br> <br>
 <img width="1844" height="853" alt="Screenshot (714)" src="https://github.com/user-attachments/assets/44eb3fa7-5951-4e94-89a2-b93adf2ad6a1" />
  <br> <br>
+ 
 # 🔹 AWS EC2 access & output screenshot
  <br> <br>
   <img width="1855" height="820" alt="Screenshot (717)" src="https://github.com/user-attachments/assets/35812d97-eaec-48cb-9c90-f8a166275c03" />
