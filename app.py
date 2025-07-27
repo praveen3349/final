@@ -21,7 +21,7 @@ def home():
         <style>
             :root {
                 --primary-blue: #007bff;
-                --primary-gradient-start: #9a6ded;
+                --primary-gradient-start: #eb44d7;
                 --primary-gradient-end: #2193b0;
                 --card-bg: white;
                 --text-dark: #333;
