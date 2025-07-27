@@ -12,7 +12,7 @@ This project implements a fully automated **CI/CD pipeline** for a Python Flask 
 
 The project enables developers to build, test, and deploy their Flask application automatically on code changes.
 
-<img width=""512" height="768" alt="image" src="https://github.com/user-attachments/assets/afd7e509-c269-4092-8bb8-18c9d8420e48" />
+<img width="512" height="768" alt="image" src="https://github.com/user-attachments/assets/afd7e509-c269-4092-8bb8-18c9d8420e48" />
 
 
  _______________________________________
