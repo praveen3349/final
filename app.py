@@ -21,8 +21,8 @@ def home():
         <style>
             :root {
                 --primary-blue: #007bff;
-                --primary-gradient-start: #eb44d7;
-                --primary-gradient-end: #eb44d7;
+                --primary-gradient-start: #007bff ;
+                --primary-gradient-end: #f2d0ee;
                 --card-bg: white;
                 --text-dark: #333;
                 --text-light: #666;
@@ -222,7 +222,7 @@ def status():
             <div class="status-info">
                 <p><strong>Message:</strong> API is running smoothly</p>
                 <p><strong>Uptime:</strong> 100%</p>
-                <p><strong>Version:</strong> v1.0.0</p>
+                <p><strong>Version:</strong> v2.0.0</p>
                 <p><strong>Last Updated:</strong> {current_time_ist}</p>
             </div>
             <a href="/" class="btn-back-home">← Back to Home</a>
