@@ -133,9 +133,7 @@ Access your Flask app in the browser at:
 http://<your-ec2-public-ip\>/
 
 The application will show the Dashboard and Status APIs with full CI/CD automation.
-
 <br> <br>
-
 # 🔹 Sample API response
 ## Home Page ( / )
 <img width="1844" height="847" alt="flask api " src="https://github.com/user-attachments/assets/00944b38-12d3-4fb9-b25e-282cae5394d4" />
