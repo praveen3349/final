@@ -22,7 +22,7 @@ def home():
             :root {
                 --primary-blue: #007bff;
                 --primary-gradient-start: #eb44d7;
-                --primary-gradient-end: #2193b0;
+                --primary-gradient-end: #eb44d7;
                 --card-bg: white;
                 --text-dark: #333;
                 --text-light: #666;
